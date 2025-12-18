@@ -57,7 +57,7 @@ const Contact = () => {
             {/* SOCIAL */}
             <div className="flex gap-4 flex-wrap">
               <a
-                href="https://github.com/vikramlale"
+                href="https://github.com/vikramlale7007"
                 target="_blank"
                 rel="noreferrer"
                 className="px-6 py-3 rounded-xl bg-slate-800/50 border border-slate-700/40 text-white flex items-center gap-2 hover:scale-105 transition"

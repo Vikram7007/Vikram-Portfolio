@@ -7,7 +7,8 @@ const Navbar = () => {
 
   // Smooth fade-down on load
   useEffect(() => {
-    setShow(true);
+    const timer = setTimeout(() => setShow(true), 50);
+    return () => clearTimeout(timer);
   }, []);
 
   // Handle scroll effects
@@ -74,7 +75,7 @@ const Navbar = () => {
               <li key={id} className="relative group">
                 <a
                   href={`#${id}`}
-                  onClick={() => setActiveSection(id)}
+                  onClick={(e) => handleNavClick(e, id)}
                   className={`
                     relative px-5 py-2.5 rounded-xl
                     transition-all duration-300

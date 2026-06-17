@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import payrollImg from "../assets/Payroll-System.png";
-import rentzoneImg from "../assets/Rentzone.png";
+import rentzoneImg from "../assets/rentzone.png";
 import grampulseImg from "../assets/Grampulse.png";
 import attendanceAppImg from "../assets/attendance-app.png";
 import classesAppImg from "../assets/Classes-app.png";

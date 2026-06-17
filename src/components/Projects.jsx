@@ -1,9 +1,20 @@
 import { useEffect, useRef, useState } from "react";
-import rentzoneImg from "../assets/rentzone.png";
-import contractorImg from "../assets/contractor.png";
-import windowImg from "../assets/windowworld.png";
+import payrollImg from "../assets/Payroll-System.png";
+import rentzoneImg from "../assets/Rentzone.png";
+import grampulseImg from "../assets/Grampulse.png";
+import attendanceAppImg from "../assets/attendance-app.png";
+import classesAppImg from "../assets/Classes-app.png";
 
 const projects = [
+  {
+    name: "Payroll System",
+    image: payrollImg,
+    desc: "A comprehensive payroll and employee management system featuring a real-time dashboard, live tracking, attendance feed, and leave management.",
+    tech: ["React", "Node", "Express", "MongoDB", "Tailwind CSS"],
+    link: "https://github.com/Vikram7007/Payroll-System", // Adjust link as needed
+    category: "Full Stack",
+    gradient: "from-emerald-500 to-teal-500",
+  },
   {
     name: "RentZone",
     image: rentzoneImg,
@@ -14,23 +25,32 @@ const projects = [
     gradient: "from-purple-500 to-pink-500",
   },
   {
-    name: "Contractor Connect",
-    image: contractorImg,
-    desc: "A service-based MERN application connecting users with verified contractors for construction and repair services.",
-    tech: ["React", "Node", "Express", "MongoDB"],
-    link: "https://github.com/Vikram7007/Contractor_Sarthi",
+    name: "Grampulse",
+    image: grampulseImg,
+    desc: "A digital citizen portal empowering rural communities through intelligent digital infrastructure, verified identity, and transparent governance.",
+    tech: ["React", "Node", "Express", "MongoDB"], // You can adjust the tech stack
+    link: "https://github.com/Vikram7007/GramPulse-app", // Add the GitHub or live link here
     category: "Full Stack",
-    gradient: "from-cyan-500 to-blue-500",
+    gradient: "from-green-600 to-emerald-400",
   },
   {
-    name: "Window World",
-    image: windowImg,
-    desc: "A modern exterior remodeling website UI inspired by real-world business sites, focusing on clean design and responsiveness.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    link: "#",
-    category: "Frontend",
-    gradient: "from-blue-500 to-purple-500",
+    name: "Employee Tracking App",
+    image: attendanceAppImg,
+    desc: "A mobile application for employee attendance, real-time location tracking, field record management, and leave requests.",
+    tech: ["React Native", "Node.js", "Express", "MongoDB"],
+    link: "https://github.com/Vikram7007/Payroll-System", 
+    category: "Mobile App",
+    gradient: "from-blue-600 to-indigo-500",
   },
+  {
+    name: "Kaizen Academy App",
+    image: classesAppImg,
+    desc: "An educational mobile application for institute management, featuring study material distribution, batch navigation, and student engagement tools.",
+    tech: ["React Native", "Expo", "Node.js", "MongoDB"],
+    link: "https://github.com/Vikram7007/", 
+    category: "Mobile App",
+    gradient: "from-red-500 to-orange-500",
+  }
 ];
 
 const Projects = () => {
@@ -134,11 +154,15 @@ const Projects = () => {
               <div className={`absolute -inset-[1px] bg-gradient-to-r ${project.gradient} rounded-3xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
               
               {/* IMAGE CONTAINER */}
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-56 overflow-hidden bg-slate-900/40">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
+                    project.category === 'Mobile App' 
+                      ? 'object-contain py-4' 
+                      : 'object-cover'
+                  }`}
                 />
                 {/* IMAGE OVERLAY */}
                 <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
